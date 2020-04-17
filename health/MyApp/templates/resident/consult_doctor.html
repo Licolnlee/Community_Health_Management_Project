@@ -1,0 +1,375 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+<script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{#<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">#}
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+{% extends 'resident_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+
+{% endblock %}
+
+{% block body %}
+<style>
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+li {
+    list-style: none;
+}
+input {
+    border-radius: 5px;
+}
+.leftbar ul {
+    padding: 0px;
+}
+.leftbar li {
+    padding: 10px;
+}
+.leftbar {
+    background-color: #212e3e;
+    width: 50px;
+    height: 100%;
+    color:grey;
+    padding: 0px;
+    text-align: center;
+    position: absolute;
+}
+.container {
+    height: 100%;
+    width: 100%;
+    background:  linear-gradient(#1f94bf 20%,#edf5f8 0, #edf5f8 80%, #1f94bf 0);
+    display: flex;
+    margin: 0;
+}
+.chatbox {
+    margin: auto;
+    height: 70%;
+    width: 80%;
+    transform: translateY(-10%);
+    box-shadow: 0 0 0 1px gray;
+    display: flex;
+    align-self: center;
+    top: 7500px;
+    visibility: visible;
+}
+.chatleft {
+    background-color: #ffffff;
+    width: 25%;
+    left: 0;
+    height: 100%;
+}
+.chatleft .top {
+    height: 10%;
+    color: grey;
+    background-color: #F7F9F9;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.searchbtn {
+    height: 36px;
+    width: 36px;
+    border-radius: 18px;
+    background-color: #1f94bf;
+    color: #ECF0F1;
+    margin-left: 10px;
+}
+.searchbtn:hover {
+    cursor: pointer;
+    background-color: steelblue;
+}
+.chatleft .center {
+    overflow-y: scroll;
+    height: 90%;
+}
+.chatleft .center ul{
+    padding-left: 10px;
+}
+.chatleft .center li{
+    margin: 10px;
+}
+.chatright {
+    background-color: #ffffff;
+    width: 75%;
+    height: 100%;
+}
+.chatright .top {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+.chatright .center {
+    background-color: #edf5f8;
+    height: 65%;
+    overflow-y: scroll;
+}
+.chatright .center ul {
+    padding: 10px;
+}
+.chatright .center li {
+    margin: 10px;
+    width: 100%;
+}
+.chatright .center p{
+    display: inline-block;
+}
+.msgcard {
+    margin: 0 10px 0 10px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 60%;
+}
+.msgleft {
+    float: left;
+}
+.msgleft div{
+    float: left;
+}
+.msgright {
+    float: left;
+}
+.msgright div{
+    float: right;
+}
+.chatright .footer {
+    height: 25%;
+    background-color: #FBFCFC;
+    text-align: right;
+}
+.sendbtn {
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: #58D68D;
+    color: white;
+    font-weight: bold;
+    margin:10px 20px 0 0;
+}
+.container-fluid{
+    border: 0px;
+}
+.panel-heading{
+    visibility: hidden;
+}
+.panel-primary{
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 0px;
+    visibility: visible;
+}
+
+</style>
+    <script>
+    function on_return(event) {
+        if (event.keyCode==13) {
+            if (document.all('sub')!=null) {
+                document.all('sub').click();
+            }
+        }
+    }
+</script>
+    <body onkeydown="on_return(event)">
+{#    <script>#}
+{#    $(function () {#}
+{#        updateMsg();#}
+{#        $('#chatForm').submit(function () {#}
+{#            $.post("./post/",#}
+{#            $('#chatForm'.serialize(),#}
+{#            function (data) {#}
+{#                $("#content").val("");#}
+{#            })#}
+{#            );#}
+{#            return false;#}
+{#        });#}
+{#    });#}
+{##}
+{#    function updateMsg() {#}
+{#        $.post(#}
+{#            "./post/",#}
+{#            {#}
+{#                post_type:"get_chat",#}
+{#                last_chat_id:$(".chat_id").last().val()#}
+{#            },#}
+{#            function (data) {#}
+{#                $('.list-group-item').append(data);#}
+{#            }#}
+{#        );#}
+{#        setTimeout("updateMsg()",1000);#}
+{#    }#}
+{#    </script>#}
+    {##}
+{#     <br><br>#}
+    <div class="container-fluid clear-float" style="padding-right: 1000px; padding-top: 60px;">
+<h1 style="line-height: 2em"></h1><br/>
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
+    <div class="panel panel-primary" style="width: 1300px;height: 600px;">
+        <div class="panel-heading">
+            <h3 class="panel-title"><strong>医生在线咨询</strong></h3>
+        </div>
+        <div class="panel-body">
+            <div class="chatbox">
+                <div class="chatleft">
+                    <div class="top">
+                        <i class="fas fa-bars" style="font-size: 1.4em"></i>
+                        <input type="text" placeholder="搜索" style="width: 140px;height: 36px;margin-left: 25px">
+                        <button class="searchbtn"><i class="fas fa-search"></i> </button>
+                    </div>
+                    <div class="center">
+                        <ul>
+                            <li>
+                                <img src="../../static/img/doctor.png" style="border-radius: 20px;vertical-align: middle;" width="40" height="40">
+                                <span style="margin-left: 10px">Barack Obama</span>
+                            </li>
+                                <li>
+                                <img src="../../static/img/doctor.png" style="border-radius: 20px;vertical-align: middle;" width="40" height="40">
+                                <span style="margin-left: 10px">Barack Obama</span>
+                            </li>
+                                <li>
+                                <img src="../../static/img/doctor.png" style="border-radius: 20px;vertical-align: middle;" width="40" height="40">
+                                <span style="margin-left: 10px">Barack Obama</span>
+                            </li>
+                                <li>
+                                <img src="../../static/img/doctor.png" style="border-radius: 20px;vertical-align: middle;" width="40" height="40">
+                                <span style="margin-left: 10px">Barack Obama</span>
+                            </li>
+                                <li>
+                                <img src="../../static/img/doctor.png" style="border-radius: 20px;vertical-align: middle;" width="40" height="40">
+                                <span style="margin-left: 10px">Barack Obama</span>
+                            </li>
+                                <li>
+                                <img src="../../static/img/doctor.png" style="border-radius: 20px;vertical-align: middle;" width="40" height="40">
+                                <span style="margin-left: 10px">Barack Obama</span>
+                            </li>
+                                <li>
+                                <img src="../../static/img/doctor.png" style="border-radius: 20px;vertical-align: middle;" width="40" height="40">
+                                <span style="margin-left: 10px">Barack Obama</span>
+                            </li>
+                                <li>
+                                <img src="../../static/img/doctor.png" style="border-radius: 20px;vertical-align: middle;" width="40" height="40">
+                                <span style="margin-left: 10px">Barack Obama</span>
+                            </li>
+                                <li>
+                                <img src="../../static/img/doctor.png" style="border-radius: 20px;vertical-align: middle;" width="40" height="40">
+                                <span style="margin-left: 10px">Barack Obama</span>
+                            </li>
+                                <li>
+                                <img src="../../static/img/doctor.png" style="border-radius: 20px;vertical-align: middle;" width="40" height="40">
+                                <span style="margin-left: 10px">Barack Obama</span>
+                            </li>
+                                <li>
+                                <img src="../../static/img/doctor.png" style="border-radius: 20px;vertical-align: middle;" width="40" height="40">
+                                <span style="margin-left: 10px">Barack Obama</span>
+                            </li>
+                                <li>
+                                <img src="../../static/img/doctor.png" style="border-radius: 20px;vertical-align: middle;" width="40" height="40">
+                                <span style="margin-left: 10px">Barack Obama</span>
+                            </li>
+                                <li>
+                                <img src="../../static/img/doctor.png" style="border-radius: 20px;vertical-align: middle;" width="40" height="40">
+                                <span style="margin-left: 10px">Barack Obama</span>
+                            </li>
+                                <li>
+                                <img src="../../static/img/doctor.png" style="border-radius: 20px;vertical-align: middle;" width="40" height="40">
+                                <span style="margin-left: 10px">Barack Obama</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chatright">
+                    <div class="top">
+                        <a  href="/doctor_info?appoint_id={{ appoint_id}}">
+                        <img src="../../static/img/doctor.png" style="border-radius: 20px;vertical-align: middle;" width="40" height="40"></a>
+                                <span style="margin-left: 10px">{{ receive_name }}医生</span>
+                        <div class="dropdown"style="float: right;">
+                            <i class="fas fa-ellipsos-v" style="font-size: 1.4em;position: absolute;top: -10px;right: -570px;color: gray" data-toggle="dropdown">
+                        </i>
+                            <div class="dropdown-menu" style="position: absolute;top: -10px;right: -570px;float: right">
+                                <button type="submit"formmethod="get"class="dropdown-item" formaction="/appoint_doctor/">返回上一级</button>
+                            </div>
+                    </div>
+                        </div>
+                    <div class="center">
+                        <ul>
+                            {% for mylist in mylists %}
+                                {% if mylist.message_send == receive_id and mylist.message_receive == send_id%}
+                                    <li class="msgleft" style="padding-right: 420px">
+                            <img style="border-radius: 20px;vertical-align: top;"src="../../static/img/doctor.png" width="40" hreight="40">
+                                <p class="msgcard">{{ mylist.information }}</p>
+                            </li>
+                                {% elif mylist.message_receive == receive_id and mylist.message_send == send_id%}
+                             <li class="msgright" style="padding-left: 420px">
+                                <p class="msgcard">{{ mylist.information }}</p>
+                                <img style="border-radius: 20px;vertical-align: top;"src="../../static/img/avatar1.png" width="40" height="40">
+                            </li>
+                                {% endif %}
+
+{#                            <li class="msgleft" style="padding-right: 390px;float: left">#}
+{#                                <img style="border-radius: 20px;vertical-align: top;"src="../../static/img/doctor.png" width="40" height="40">#}
+{#                                <p class="msgcard"style="word-break: keep-all">{{ m.information }}</p>#}
+{#                            </li>#}
+{#                            <li class="msgright" style="float: right;padding-left: 390px">#}
+{#                                <p class="msgcard">{{ mr.information }}</p>#}
+{#                                <img style="border-radius: 20px;vertical-align: top;"src="../../static/img/avatar1.png" width="40" height="40">#}
+{#                            </li>#}
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="footer">
+{#                        <form id="chatForm" class="form-horizontal panel container" method="post" action=".">#}
+{#                            {% csrf_token %}#}
+{#                            <div class="form-group col-md-4">#}
+                        <textarea type="text" name="information" maxlength="800" rows="5" cols="40" style="width: 100%;resize: none;border: none;height: 105px" placeholder="请在此处输入要发送的内容..."></textarea>
+                        <button id="sub" type="submit"formmethod="post"class="btn btn-success"style="position: relative;left: -13px;top: -43px;" formaction="/consult_doctor/"onclick="alert('发送成功!')"><i class="glyphicon glyphicon-send"></i> 发送</button>
+                    </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</body>
+{#    <div style="    background: #a9f2f2;#}
+{#    border: 1px solid #000;#}
+{#    width: 500px;#}
+{#    height: 69px;#}
+{#    position: relative;#}
+{#    left: 373px;#}
+{#    top: 0px;#}
+{#    border-radius: 5px;">#}
+{#    <h2>收件人：{{ receive_name }}</h2>#}
+{#    </div>#}
+{#            <div class="label label-default" style="border: 0px">收件人：{{ receive_name }}</div>#}
+{#<div style="background: #a5daeb;#}
+{#    border: 1px solid #000;#}
+{#    width: 500px;#}
+{#    height: 200px;#}
+{#    position: relative;#}
+{#    left: 373px;#}
+{#    border-radius: 5px;">#}
+{#    <p style="    position: relative;#}
+{#    top: 47px;">{{ now_time }}</p>#}
+{#<div style="position: relative;#}
+{#    top: 20px;#}
+{#    right: 106px;">#}
+{#    </div>#}
+{#    </div>#}
+{#    <input type="text"name="information"style="    width: 500px;#}
+{#    position: relative;#}
+{#    right: 4px;#}
+{#    height: 57px;#}
+{#    background: #8efa87;font-size: 24px"><br><br>#}
+{#    <input type="submit"formmethod="get"class="btn-lg btn-danger" formaction="/appoint_doctor/"value="返回上一级"style="position: relative;#}
+{#    left: 224px;">#}
+{#    <input type="submit"formmethod="post"class="btn-lg btn-success"style="position: relative;left: 143px;top: -77px;" formaction="/consult_doctor/"value="发送"onclick="alert('发送成功!')">#}
+{% endblock %}

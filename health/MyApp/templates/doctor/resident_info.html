@@ -1,0 +1,67 @@
+{% extends 'doctor_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+
+{% endblock %}
+{% block body %}<div class="container-fluid clear-float" style="padding-right: 1000px; padding-top: 40px;">
+<h1 style="line-height: 2em"></h1><br/>
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
+    <div class="panel panel-primary" style="width: 1300px">
+        <div class="panel-heading">
+            <h3 class="panel-title"><strong>个人信息</strong></h3>
+        </div>
+        <div class="panel-body">
+{#<h4 style=" font-size: 25px;position: relative;left: 22px;">居民信息</h4><br>#}
+<div class="form-group">
+<label for="inputEmail3" class="col-md-1 col-md-offset-4 control-label"> 姓名：</label>
+<div class="col-sm-3">
+<input type="text"name="resident_name"value="{{ results.resident_name }}" class="form-control"readonly><br>
+</div>
+</div>
+<div class="form-group">
+<label for="inputEmail3" class="col-md-1 col-md-offset-4 control-label"> 性别：</label>
+<div class="col-sm-3">
+    <input type="text"name="resident_sex"value="{{ results.resident_sex }}" class="form-control"readonly><br>
+
+</div>
+</div>
+<div class="form-group">
+<label for="inputEmail3" class="col-md-1 col-md-offset-4 control-label"> 年龄：</label>
+<div class="col-sm-3">
+<input type="text"name="resident_age"value="{{ results.resident_age }}" class="form-control"readonly><br>
+</div>
+</div>
+<div class="form-group">
+<label for="inputEmail3" class="col-md-1 col-md-offset-4 control-label"> 账号：</label>
+<div class="col-sm-3">
+<input type="text"name="resident_telephone"value="{{ results.resident_telephone }}" class="form-control"readonly><br>
+</div>
+</div>
+<div class="form-group">
+<label for="inputEmail3" class="col-md-1 col-md-offset-4 control-label"> 地址：</label>
+<div class="col-sm-3">
+<input type="text"name="residnet_address"value="{{ results.resident_address}}" class="form-control"readonly><br>
+</div>
+</div>
+
+{#<div class="form-group">#}
+{#<label for="inputEmail3"style="position: relative;left: 36px;" class="col-md-2 col-md-offset-3 control-label"> 所属科室：</label>#}
+{#<div class="col-sm-3">#}
+{#<input type="text"name="doctor_dept"value="{{ doctor_dept}}" class="form-control"readonly><br>#}
+{#</div>#}
+{#</div>#}
+{#<div class="form-group">#}
+{#<label for="inputEmail3"style="position: relative;left: 36px;" class="col-md-2 col-md-offset-3 control-label"> 所属医院：</label>#}
+{#<div class="col-sm-3">#}
+{#<input type="text"name="doctor_hospital"value="{{ doctor_hospital}}" class="form-control"readonly><br>#}
+{#</div>#}
+{#</div>#}
+        <div class="form-group">
+	<div class="col-md-2 col-md-offset-6 ">
+        <button type="submit"style="position: relative;left: 65px;top: 10px;"class="btn btn-default"value="返回上一级"formaction="/resident_info/"formmethod="post"><i class="glyphicon glyphicon-arrow-left" style="color: black"></i> 返回上一级</button>
+	</div>
+</div>
+
+
+{% endblock %}

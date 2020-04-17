@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+ <title>{% block title %}{% endblock %}</title>
+</head>
+{% block link %}
+{% endblock %}
+<link rel="stylesheet"href="../static/css/bootstrap.min.css">
+<link rel="stylesheet"href="../static/css/font-awesome.min.css">
+<link rel="stylesheet" href="../static/css/index.css" />
+<link rel="stylesheet"href="../static/css/c.css">
+
+<style>
+     {% block style %}{% endblock %}
+     table{
+         margin:0 auto;
+     }
+.bg_container{
+    width: 1254px;
+    height: 780px;
+    position: relative;
+    top: 54px;
+    left: 221px;
+    color: black;
+}
+.bg_info{
+    text-align: center;
+    position: relative;
+    top:10px;
+}
+.table-hover > tbody > tr:hover {
+    background-color:greenyellow;
+}
+.a{
+        background-color:Transparent;
+        border-color:Transparent;
+        border-style:None
+}
+.b{
+        background-color:Transparent;
+        border-color:Transparent;
+        border-style:None;
+        font-size: 30px;
+}
+.navbar-default1{
+    background-color: #2578ff;
+    border-color: #4cae4c;
+}
+    .c{
+        margin-top: 5px;
+        margin-right: 10px;
+    }
+    .d{
+        margin-top: 5px;
+        margin-right: 20px;
+    }
+    .e{
+        float: left;
+        margin-left: 80px;
+        font-size: 30px;
+    }
+</style>
+<body>
+<form>
+  {% csrf_token %}
+<div class="container">
+	<div class="row clearfix">
+		<div class=" column"style="width:1322px;position: absolute;left: 157px;">
+			<nav class="navbar navbar-default1 navbar-inverse" role="navigation">
+                <div>
+                    <p class="e"><em>Health Management System</em></p>
+                </div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							 <div class="btn-group"style="position: relative;right: 9px;">
+				            <button class="btn btn-success dropdown-toggle c"data-toggle="dropdown">个人中心
+                                <span class="caret "></span>
+                            </button>
+							<ul class="dropdown-menu">
+                                <li>
+                                    <a href="/alter_manager_password?">修改密码</a>
+								</li>
+								<li>
+                                    <a href="/back1?">切换账号</a>
+								</li>
+								<li class="divider">
+								</li>
+							</ul>
+                             </div>
+                        </li>
+                        <li>
+                            <input type="submit"style="position: relative;right: 5px;"value="退出"class=" btn btn-success d"formaction="/back1/"formmethod="get">
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+</div>
+<div class="s-side">
+	<ul>
+		<li class="s-firstItem first">
+			<a href="#">
+				<i class="fa fa-home"></i>
+				<input type="submit"value="首页"class="b"formaction="/manager_home_page/"formmethod="get">
+			</a>
+		</li>
+		<li class="first">
+			<div class="d-firstNav s-firstNav clearfix">
+				<i class="fa fa-bars"></i>
+				<span>居民管理</span>
+				<i class="fa fa-caret-right fr "></i>
+			</div>
+			<ul class="d-firstDrop s-firstDrop">
+				<li>
+					<div class="d-secondNav s-secondNav">
+						<i class="fa fa-minus-square-o"></i>
+						<input type="submit"value="查看居民信息"class="a"formmethod="get"formaction="/search_resident/">
+						<i class="fa fa-caret-right fr"></i>
+					</div>
+				</li>
+			</ul>
+        <li class="first">
+			<div class="d-firstNav s-firstNav clearfix">
+				<i class="fa fa-bars"></i>
+				<span>医生管理</span>
+				<i class="fa fa-caret-right fr "></i>
+			</div>
+			<ul class="d-firstDrop s-firstDrop">
+				<li>
+					<div class="d-secondNav s-secondNav">
+						<i class="fa fa-minus-square-o"></i>
+						<input type="submit"value="查看医生信息"class="a"formmethod="get"formaction="/search_doctors/">
+						<i class="fa fa-caret-right fr"></i>
+					</div>
+				</li>
+            </ul>
+		</li>
+        <li class="first">
+			<div class="d-firstNav s-firstNav clearfix">
+				<i class="fa fa-bars"></i>
+				<span>服务团队管理</span>
+				<i class="fa fa-caret-right fr "></i>
+			</div>
+			<ul class="d-firstDrop s-firstDrop">
+				<li>
+					<div class="d-secondNav s-secondNav">
+						<i class="fa fa-minus-square-o"></i>
+                        <input type="submit"value="查看服务团队信息"class="a"formmethod="get"formaction="/search_team/">
+						<i class="fa fa-caret-right fr"></i>
+					</div>
+				</li>
+            </ul>
+		</li>
+        <li class="first">
+			<div class="d-firstNav s-firstNav clearfix">
+				<i class="fa fa-bars"></i>
+				<span>账户管理</span>
+				<i class="fa fa-caret-right fr "></i>
+			</div>
+			<ul class="d-firstDrop s-firstDrop">
+				<li>
+					<div class="d-secondNav s-secondNav">
+						<i class="fa fa-minus-square-o"></i>
+                        <input type="submit"value="查看所有账户"class="a"formmethod="get"formaction="/search_account/">
+						<i class="fa fa-caret-right fr"></i>
+					</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<div class="bg_container">
+<div class="bg_info">
+  按姓名查找：
+<input type="text" name="doctor_name"value="{{ doctor_name }}"class="input-lg" >
+<input type="submit" value="查找"class="nput-group-addon btn btn-primary btn-lg"formaction="/search_d/"formmethod="get">
+<br><br>
+    按科室查找：
+<input type="text" name="doctor_dept"value="{{ doctor_dept }}"class="input-lg" >
+<input type="submit" value="查找"class="nput-group-addon btn btn-primary btn-lg"formaction="/search_d/"formmethod="post">
+<br><br>
+    {% if  status == 1 %}
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<table class="table table-bordered table-hover">
+                    <tr class="danger">
+                    <td>姓名</td>
+                    <td>性别</td>
+                    <td>年龄</td>
+                    <td>工作经验</td>
+                    <td>等级</td>
+                    <td>科室</td>
+                    <td>所属医院</td>
+                    <td>电话</td>
+                    <td>状态</td>
+                    <td>操作</td>
+                </tr>
+                    {% for doctor in doctors %}
+                <tr>
+                    <td>{{ doctor.doctor_name }}</td>
+                    <td>{{ doctor.doctor_sex }}</td>
+                    <td>{{ doctor.doctor_age }}</td>
+                    <td>{{ doctor.doctor_work_time }}</td>
+                    <td>{{ doctor.doctor_level }}</td>
+                    <td>{{ doctor.doctor_dept }}</td>
+                    <td>{{ doctor.doctor_hospital }}</td>
+                    <td>{{ doctor.doctor_telephone }}</td>
+                    <td>{{ doctor.doctor_condition }}</td>
+                    <td><a id="modal-170519" href="#modal-container-170519" role="button" class="btn" data-toggle="modal">签约</a></td>
+                </tr>
+            {% endfor %}
+            </table>
+           </div>
+	</div>
+</div>
+{% endif %}
+<h2>家庭医生</h2><br>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column gundong1">
+			<table class="table table-bordered1 table-hover">
+                <tr class="info">
+                    <td>姓名</td>
+                    <td>性别</td>
+                    <td>年龄</td>
+                    <td>工作经验</td>
+                    <td>等级</td>
+                    <td>科室</td>
+                    <td>所属医院</td>
+                    <td>电话</td>
+                    <td>操作</td>
+                </tr>
+            {% for result in results %}
+            <tr>
+                    <td>{{ result.doctor_name }}</td>
+                    <td>{{ result.doctor_sex }}</td>
+                    <td>{{ result.doctor_age }}</td>
+                    <td>{{ result.doctor_work_time }}</td>
+                    <td>{{ result.doctor_level }}</td>
+                    <td>{{ result.doctor_dept }}</td>
+                    <td>{{ result.doctor_hospital }}</td>
+                    <td>{{ result.doctor_telephone }}</td>
+                <td><a id="modal-170519" href="#modal-container-170519" role="button" class="btn" data-toggle="modal"style="color: red">签约</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+           </div>
+	</div>
+</div>
+    <div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="modal fade" id="modal-container-170519" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h4 class="modal-title" id="myModalLabel"name="resident_request_time">
+                                请输入预约时间：
+							</h4>
+						</div>
+						<div class="modal-body">
+                            <input type="text"name="customer_bank_id"class="form-control">
+						</div>
+						<div class="modal-footer">
+							 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <input type="button" class="btn btn-success"value="确认"formaction="/doctor_info/"formmethod="post">
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+</div>
+</div>
+<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/js/index.js" ></script>
+<script src="../static/js/bootstrap.min.js"></script>
+</form>
+</body>
+</html>

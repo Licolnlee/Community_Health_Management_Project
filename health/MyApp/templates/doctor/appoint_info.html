@@ -1,0 +1,101 @@
+{% extends 'doctor_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+<link rel="stylesheet"href="../../static/css/text.css">
+
+{% endblock %}
+
+{% block body %}
+
+
+{#<div style="background-color: #e1e9e3;#}
+{#    width: 635px;#}
+{#    height: 367px;#}
+{#    padding: 3px;#}
+{#    position: relative;#}
+{#    left: 315px;">#}
+{#<div>#}
+{#       <h2>签约表</h2><br>#}
+<div class="container theme-showcase" style="padding-right: 1000px; padding-top: -30px;">
+    <h1 style="line-height: 2em"></h1><br/>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="panel panel-primary" style="width: 1300px;height: fit-content" >
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>签约详情</strong></h3>
+                </div>
+            {% if  status == 1 %}
+    <div class="alert alert-success alert-dismissable" style="left: 60px;">您已完成签约！</div>
+    {% endif %}
+                <div class="panel-body">
+     甲方：<input type="text"value="{{ resident_name }}"readonly>
+    性别：<input type="text"value="{{ resident_sex }}"readonly>
+    年龄：<input type="text"value="{{ resident_age }}"readonly>
+</div>
+    <br>
+    <div style="position: relative;
+    right: 98px;
+    top: 5px;">
+        电话：<input type="text"value="{{ resident_telephone }}"name="resident_telephone"readonly>
+         住址：<input type="text"value="{{ resident_address }}"readonly>
+    </div>
+<br>
+<br>
+<br>
+     <div>
+            乙方：<input type="text"value="{{ doctor_name }}"readonly>
+            性别：<input type="text"value="{{ doctor_sex }}"readonly>
+            年龄：<input type="text"value="{{ doctor_age }}"readonly>
+     </div> <br>
+     <div style="position: relative;
+    right: 80px;
+    top: 5px;">
+            电话：<input type="text"value="{{ doctor_telephone }}"name="doctor_telephone"readonly>
+            所属医院：<input type="text"value="{{ doctor_hospital }}"readonly>
+     </div>
+    {% if  status == 1 %}
+<img src="../../static/img/signed.png"style="width: 85px;
+    position: relative;
+    left: 268px;
+    top: -3px;">
+        <div style="position:relative;left: 83px;padding: 17px;">
+    <div class="form-group">
+	<div class="col-md-2 col-md-offset-6 ">
+        <input type="submit"style="position: relative;left: 65px;top: 10px;" class="btn btn-success"value="确认签约"formaction="/appoint_detail/"formmethod="get"onclick="alert('签约成功！')"disabled>
+	</div>
+</div><br>
+    <div class="form-group">
+	<div class="col-md-2 col-md-offset-6 ">
+        <input type="submit"style="position: relative;left: 65px;top: 10px;" class="btn btn-danger"value="拒绝签约"formaction="/appoint_detail/"formmethod="post"onclick="alert('拒绝签约成功！')"disabled>
+	</div>
+</div><br>
+    <div class="form-group">
+	<div class="col-md-2 col-md-offset-6 ">
+        <input type="submit"style="position: relative;left: 65px;top: 10px;" class="btn btn-primary"value="返回上一级"formaction="/back2/"formmethod="post">
+	</div>
+        {% else %}
+                    <div style="position:relative;left: 83px;padding: 17px;">
+    <div class="form-group">
+	<div class="col-md-2 col-md-offset-6 ">
+        <input type="submit"style="position: relative;left: 65px;top: 10px;" class="btn btn-success"value="确认签约"formaction="/appoint_detail/"formmethod="get"onclick="alert('签约成功！')">
+	</div>
+</div><br>
+    <div class="form-group">
+	<div class="col-md-2 col-md-offset-6 ">
+        <input type="submit"style="position: relative;left: 65px;top: 10px;" class="btn btn-danger"value="拒绝签约"formaction="/appoint_detail/"formmethod="post"onclick="alert('拒绝签约成功！')">
+	</div>
+</div><br>
+    <div class="form-group">
+	<div class="col-md-2 col-md-offset-6 ">
+        <input type="submit"style="position: relative;left: 65px;top: 10px;" class="btn btn-primary"value="返回上一级"formaction="/back2/"formmethod="post">
+	</div>
+    {% endif %}
+</div>
+
+</div><br>
+</div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,102 @@
+<style>
+    .search {
+  float: left;
+  display: inline;
+  width: 568px;
+  height: 28px;
+  border: 0px solid #ccc;//设置边框
+  background-color: #f2f2f5;
+  margin: 10px 0;
+}
+.search_input {
+  width: 520px;
+  float: left;
+  display: inline;
+  height: 28px;
+  line-height: 28px \9;
+  padding: 0 8px;
+  behavior: url(#default#savehistory);
+}
+</style>
+{% extends 'doctor_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+{% endblock %}
+{% block body %}
+    <script type="text/javascript">
+    var a={{ status }}
+    if(a==1){
+        alert("签约成功");
+    }
+    </script>
+{#     请输入服务团队名称：#}
+{#<input type="text" name="team_name"value="{{ team_name }}"class="input-lg" >#}
+{#<input type="submit" value="查找"class="nput-group-addon btn btn-primary btn-lg"formaction="/search_teams/"formmethod="get">#}
+{#<br><br>#}
+{##}
+{#<h2>服务团队</h2><br>#}
+{#<div class="container">#}
+{#	<div class="row clearfix">#}
+{#		<div class="col-md-12 column gundong1" style="width: 1300px;height: 600px">#}
+{#			<table class="table table-bordered1 table-hover" style="word-break: keep-all" frame="void">#}
+    <div class="container theme-showcase" style="padding-right: 1000px; padding-top: -30px;">
+    <h1 style="line-height: 2em"></h1><br/>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="panel panel-primary" style="width: 1300px;" >
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>服务团队信息查询</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>注意！</strong>请根据服务团队信息进行查询
+                    </div>
+                <div class="col-md-6">
+                 <form role="form" name="form1" style="float: left">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="doctor_name" style="color: black;float: left;">请输入服务团队名称</label>
+                            <div class="search">
+{#                                <form>#}
+                                <input type="text" name="team_name"value="{{ team_name }}" placeholder="请输入服务团队名称" class="search_input" />
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default" formaction="/search_teams/" formmethod="get" style="width: 48px;height: 28px;">查询</button>
+                                </span>
+
+{#                                </form>#}
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+		<div class="col-md-12 column gundong1" style="width: 1200px;height: 600px">
+			<table class="table table-bordered1 table-hover" style="color:black;word-break: keep-all">
+                <tr class="info">
+                    <th>服务团队名称</th>
+                    <th>团队介绍</th>
+                    <th>联系电话</th>
+                    <th>操作</th>
+                </tr>
+            {% for result in results %}
+            <tr>
+                    <td>{{ result.team_name }}</td>
+                    <td>{{ result.team_introduction }}</td>
+                    <td>{{ result.team_telephone }}</td>
+                {% if doctor_appoint_condition != none %}
+                <td><button class="btn btn-default" style="background-color: forestgreen" onclick="return confirm('请问确认要签约该团队吗？')" disabled="disabled"><a href="/search_service_team?team_id={{ result.id}}"><i class="glyphicon glyphicon-pushpin"></i> 签约</a></button></td>
+            {% elif result.team_condition == "已签约" %}
+            <td><button class="btn btn-default" style="background-color: forestgreen" onclick="return confirm('请问确认要签约该团队吗？')" disabled="disabled"><a href="/search_service_team?team_id={{ result.id}}"><i class="glyphicon glyphicon-pushpin"></i> 签约</a></button></td>
+            {% else %}
+             <td><button class="btn btn-default" style="background-color: forestgreen" onclick="return confirm('请问确认要签约该团队吗？')" ><a href="/search_service_team?team_id={{ result.id}}"><i class="glyphicon glyphicon-pushpin"></i> 签约</a></button></td>
+            {% endif %}
+            </tr>
+                 {% empty %}
+                <tr><strong>搜索无结果</strong></tr>
+            {% endfor %}
+        </table>
+           </div>
+	</div>
+</div>
+{% endblock %}

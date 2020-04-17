@@ -1,0 +1,10 @@
+.gundong1{
+            width: 1300px;
+            height: 700px;
+            overflow: auto;
+}
+
+.td {
+    border: 10px solid red;
+}
+.column table td,th,tr{ border:1px solid black}

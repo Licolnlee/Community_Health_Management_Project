@@ -1,0 +1,52 @@
+{% extends 'resident_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid clear-float" style="padding-right: 1000px; padding-top: -20px;">
+<h1 style="line-height: 2em"></h1><br/>
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
+    <div class="panel panel-primary" style="width: 1300px;height: 600px;">
+        <div class="panel-heading">
+            <h3 class="panel-title"><strong>{{ name }}的健康报表</strong></h3>
+        </div>
+        <div class="panel-body">
+{#         <h2><strong>{{ name }}</strong>的健康报表</h2><br>#}
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column gundong1" style="width: 1100px;height: 600px">
+			<table class="table table-bordered1 table-hover" style="word-break: keep-all">
+                <tr class="info">
+                    <td>身高</td>
+                    <td>体重</td>
+                    <td>BMI值</td>
+                    <td>状态</td>
+                    <td>测试时间</td>
+                    <td>操作</td>
+                </tr>
+            {% for result in results %}
+            <tr>
+                    <td>{{ result.report_height }}</td>
+                    <td>{{ result.report_weight }}</td>
+                    <td>{{ result.result_num }}</td>
+                    <td>{{ result.result_condition }}</td>
+                    <td>{{ result.report_time }}</td>
+                <td><button class="btn btn-danger"><i class="fa fa-trash"></i><a href="/delete_report?report_id={{ result.id}}" onclick="return confirm('请问确认要删除此条记录吗？')">删除</a> </button>  </td>
+            </tr>
+                {% empty %}
+                <tr><strong>您还未记录您的健康生活，请记得及时添加</strong></tr>
+            {% endfor %}
+        </table>
+           </div>
+	</div>
+    <button type="submit"style="float: right;position: relative;top: -400px" class="btn btn-warning"value="返回上一级"formaction="/home_page/"formmethod="post"><i class="glyphicon glyphicon-arrow-left"></i> 返回上一级</button>
+
+</div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

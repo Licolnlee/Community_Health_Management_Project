@@ -1,0 +1,165 @@
+{% extends 'resident_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+<link rel="stylesheet"href="../../static/css/mystyle.css">
+{% endblock %}
+
+{% block body %}
+    <p id="demo"style="font-size: 25px;color: orangered"></p><br><br>
+    <script>
+    a={{ status }}
+    if (a=1)
+        {#document.getElementById("demo").innerHTML = "您的BMI值为：{{ result_num }},身体状态：{{ result_condition }}";#}
+    alert("您的BMI值为：{{ result_num }},您的身体状态为：{{ result_condition }}");
+    </script>
+    <div class="container-fluid clear-float" style="padding-right: 1000px; padding-top: -20px;">
+<h1 style="line-height: 2em"></h1><br/>
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
+    <div class="panel panel-primary" style="width: 1300px;height: 600px;">
+        <div class="panel-heading">
+            <h3 class="panel-title"><strong>BMI健康指数测算</strong></h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group" style="padding-top: 40px">
+<label for="inputEmail3" class="col-md-2 col-md-offset-3 control-label"> 请输入您的身高:</label>
+<div class="col-sm-3">
+<input type="text"name="height"class="form-control"value="{{ height }}" placeholder="(单位:厘米 cm)"><br>
+</div>
+</div>
+
+<div class="form-group">
+<label for="inputEmail3" class="col-md-2 col-md-offset-3 control-label"> 请输入您的体重：</label>
+<div class="col-sm-3">
+<input type="text"name="weight"class="form-control"value="{{ weight }}" placeholder="(单位:千克 kg)"><br>
+</div>
+</div>
+<div class="form-group">
+	<div class="col-md-2 col-md-offset-6 ">
+        <button type="submit"style="position: relative;left: 65px;top: 10px;" class="btn btn-info"formaction="/calculate_BMI/"formmethod="post">确认
+        </button></div>
+</div><br>
+		<div class="col-md-8 col-md-offset-3 column"style="position: relative;top: 75px;right: 100px;">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<td>
+							分类
+						</td>
+						<td>
+							BMI范围
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="info">
+						<td>
+							偏瘦
+						</td>
+						<td>
+							<= 18.4
+						</td>
+
+					</tr>
+					<tr class="success">
+						<td>
+							正常
+						</td>
+						<td>
+							18.5～23.9
+						</td>
+					</tr>
+					<tr class="warning">
+						<td>
+							过重
+						</td>
+						<td>
+							24.0～27.9
+						</td>
+					</tr>
+					<tr class="danger">
+						<td>
+							肥胖
+						</td>
+						<td>
+							>= 28.0
+						</td>
+					</tr>
+				</tbody>
+			</table>
+	</div>
+        </div>
+    </div>
+</div>
+    </div>
+{#    <h4 style=" font-size: 25px;position: relative;left: 22px;">BMI指数计算</h4><br><br>#}
+{#<div class="form-group">#}
+{#<label for="inputEmail3" class="col-md-2 col-md-offset-3 control-label"> 请输入您的身高:</label>#}
+{#<div class="col-sm-3">#}
+{#<input type="text"name="height"class="form-control"value="{{ height }}" placeholder="(单位:厘米 cm)"><br>#}
+{#</div>#}
+{#</div>#}
+{##}
+{#<div class="form-group">#}
+{#<label for="inputEmail3" class="col-md-2 col-md-offset-3 control-label"> 请输入您的体重：</label>#}
+{#<div class="col-sm-3">#}
+{#<input type="text"name="weight"class="form-control"value="{{ weight }}" placeholder="(单位:千克 kg)"><br>#}
+{#</div>#}
+{#</div>#}
+{#<div class="form-group">#}
+{#	<div class="col-md-2 col-md-offset-6 ">#}
+{#        <input type="submit"style="position: relative;left: 65px;top: 10px;" class="btn btn-success"value="确认"formaction="/calculate_BMI/"formmethod="post">#}
+{#	</div>#}
+{#</div><br>#}
+{#		<div class="col-md-8 col-md-offset-3 column"style="position: relative;top: 75px;right: 100px;">#}
+{#			<table class="table table-bordered">#}
+{#				<thead>#}
+{#					<tr>#}
+{#						<td>#}
+{#							分类#}
+{#						</td>#}
+{#						<td>#}
+{#							BMI范围#}
+{#						</td>#}
+{#					</tr>#}
+{#				</thead>#}
+{#				<tbody>#}
+{#					<tr class="info">#}
+{#						<td>#}
+{#							偏瘦#}
+{#						</td>#}
+{#						<td>#}
+{#							<= 18.4#}
+{#						</td>#}
+{##}
+{#					</tr>#}
+{#					<tr class="success">#}
+{#						<td>#}
+{#							正常#}
+{#						</td>#}
+{#						<td>#}
+{#							18.5～23.9#}
+{#						</td>#}
+{#					</tr>#}
+{#					<tr class="warning">#}
+{#						<td>#}
+{#							过重#}
+{#						</td>#}
+{#						<td>#}
+{#							24.0～27.9#}
+{#						</td>#}
+{#					</tr>#}
+{#					<tr class="danger">#}
+{#						<td>#}
+{#							肥胖#}
+{#						</td>#}
+{#						<td>#}
+{#							>= 28.0#}
+{#						</td>#}
+{#					</tr>#}
+{#				</tbody>#}
+{#			</table>#}
+{#	</div>#}
+{##}
+
+{% endblock %}

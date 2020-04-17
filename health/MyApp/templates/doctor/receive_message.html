@@ -1,0 +1,65 @@
+
+{% extends 'doctor_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+
+{% endblock %}
+
+{% block body %}
+{#    <br><br>#}
+{#    <div style="background: #a5daeb;#}
+{#    border: 1px solid #000;#}
+{#    width: 500px;#}
+{#    height: 300px;#}
+{#    position: relative;#}
+{#    left: 373px;#}
+{#border-radius: 5px;">#}
+{#<div style="position: relative;#}
+{#    top: 20px;#}
+{#    right: 106px;">#}
+    <div class="container theme-showcase" style="padding-right: 1000px; padding-top: -30px;">
+    <h1 style="line-height: 2em"></h1><br/>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="panel panel-primary" style="width: 1300px;" >
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>您的咨询消息详情</strong></h3>
+                </div>
+                <div class="panel-body">
+		<div class="col-md-12 column gundong1" style="width: 1250px;height: 600px">
+			<table class="table table-bordered1 table-hover" style="word-break: keep-all;color:black;">
+                <tr class="info">
+                    <td>发送人</td>
+                    <td>发送时间</td>
+                    <td>发送内容</td>
+                    <td>操作</td>
+                </tr>
+            <tr>
+                <td>{{ send_name }}</td>
+                <td>{{ send_time }}</td>
+                <td>{{ information }}</td>
+                <td>
+                    <button class="btn btn-info"> <a href="/contact_resident?resident_id={{ resident.id}}"><i class="glyphicon glyphicon-comment"></i> 联系居民</a></button>
+                </td>
+                <div class="form-group" style="top: -100px;">
+	<div class="col-md-2 col-md-offset-6 ">
+        <button type="submit"style="position: relative;left: 460px;top: 140px;"class="btn btn-default"value="返回上一级"formaction="/doctor_delete_message/"formmethod="post"><i class="glyphicon glyphicon-arrow-left" style="color: black"></i> 返回上一级</button>
+	</div>
+           </div>
+{#   发&nbsp;送 &nbsp;人&nbsp;：<input type="text"value="{{ send_name }}"><br><br>#}
+{#    发送时间：<input type="text"value="{{ send_time }}"><br><br>#}
+{#    发送内容：#}
+{#        <textarea name="n" rows="4"cols="20"readonly>{{ information }}</textarea>#}
+{#    </div>#}
+{#    </div>#}
+{#    <input type="text"name="response_information"style="    width: 500px;#}
+{#    position: relative;#}
+{#    right: 4px;#}
+{#    height: 57px;#}
+{#    background: #8efa87;font-size: 24px"><br><br>#}
+{#    <input type="submit"formmethod="post"class="btn-lg btn-success"style="    position: relative;left: 241px;top: -74px;" formaction="/doctor_receive_message/"value="回复"onclick="alert('发送成功!')">#}
+{#    <input type="submit"formmethod="post"class="btn-lg btn-danger" formaction="/doctor_delete_message/"value="返回"style="position: relative;#}
+{#    left: 167px;">#}
+
+{% endblock %}

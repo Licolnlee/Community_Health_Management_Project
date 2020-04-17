@@ -1,0 +1,42 @@
+{% extends 'resident_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+
+{% endblock %}
+
+{% block body %}
+{#   <h2>消息中心</h2><br>#}
+{#<div class="container">#}
+{#	<div class="row clearfix">#}
+     <div class="container-fluid clear-float" style="padding-right: 1000px; padding-top: -20px;">
+<h1 style="line-height: 2em"></h1><br/>
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
+    <div class="panel panel-primary" style="width: 1300px;height: 600px;">
+        <div class="panel-heading">
+            <h3 class="panel-title"><strong>签约消息汇总</strong></h3>
+        </div>
+        <div class="panel-body">
+		<div class="col-md-12 column gundong1" style="width: 1200px;height: 600px">
+			<table class="table table-bordered1 table-hover" style="word-break: keep-all">
+                <tr class="info">
+                    <td>发送账户</td>
+                    <td>发送时间</td>
+                    <td>签约结果</td>
+                    <td>操作</td>
+                </tr>
+            {% for result in results %}
+            <tr>
+                    <td>{{ result.doctor_telephone }}</td>
+                    <td>{{ result.doctor_deal_time }}</td>
+                    <td>{{ result.appoint_result }}</td>
+                <td><button class="btn btn-danger" onclick="return confirm('请问确定要删除您的签约信息吗？')"><i class="fa fa-trash"></i><a  href="/cancel_appoint?appoint_id={{ result.id}}">删除</a></button></td>
+            </tr>
+                                {% empty %}
+                <tr><strong>您暂未收到任何消息</strong></tr>
+            {% endfor %}
+        </table>
+           </div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends 'doctor_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+<link rel="stylesheet" href="../../static/css/doctor_body.css">
+<link rel="stylesheet" href="../../static/css/button.css">
+
+{% endblock %}
+
+{% block body %}
+{#<div class="s">#}
+{#<p id="one">存放时间的地方</p>#}
+{#<p id="two">存放年份的地方</p>#}
+{#    </div>#}
+    <script>
+    {% if attention == 1 %}
+        alert("您有{{ count }}条新消息！")
+    {% endif %}
+    alert(count)
+</script>
+{#<script>#}
+{#	var mydate = new Date();#}
+{#	var one = document.getElementById("one");#}
+{#	var two= document.getElementById("two");#}
+{#	one.innerHTML=mydate.toLocaleTimeString();#}
+{#	two.innerHTML=mydate.toLocaleDateString();#}
+{#</script>#}
+{#	<div class="toggle toggle--text">#}
+{#			<label class="toggle--btn" ></label>#}
+{#	</div>#}
+{#    {% if signal1 == 1 %}#}
+{#          <input type="submit" name="signal"value="空闲"formmethod="post"formaction="/doctor_home_page/"style="color: #db4c00;#}
+{#    position: relative;#}
+{#    width: 64px;#}
+{#    height: 39px;#}
+{#    right: 499px;#}
+{#    top: -191px;#}
+{#    background: transparent;#}
+{#    border: none;#}
+{#    font-size: 26px;"/>#}
+{#    {% else %}#}
+{#            <input type="submit" name="signal"value="空闲"formmethod="post"formaction="/doctor_home_page/"style="color: #999;#}
+{#    position: relative;#}
+{#    width: 64px;#}
+{#    height: 39px;#}
+{#    right: 499px;#}
+{#    top: -191px;#}
+{#    background: transparent;#}
+{#    border: none;#}
+{#    font-size: 26px;"/>#}
+{#    {% endif %}#}
+{##}
+{##}
+{##}
+{##}
+{#    {% if signal2 == 1 %}#}
+{#         <input type="submit"name="signal" value="忙碌"formmethod="post"formaction="/doctor_home_page/"style="color: #db4c00;#}
+{#    position: relative;#}
+{#    width: 64px;#}
+{#    height: 39px;#}
+{#    right: 479px;#}
+{#    top: -191px;#}
+{#    background: transparent;#}
+{#    border: none;#}
+{#    font-size: 26px;"/>#}
+{#    {% else %}#}
+{#         <input type="submit"name="signal" value="忙碌"formmethod="post"formaction="/doctor_home_page/"style="color: #999;#}
+{#    position: relative;#}
+{#    width: 64px;#}
+{#    height: 39px;#}
+{#    right: 479px;#}
+{#    top: -191px;#}
+{#    background: transparent;#}
+{#    border: none;#}
+{#    font-size: 26px;"/>#}
+{#    {% endif %}#}
+
+{% endblock %}

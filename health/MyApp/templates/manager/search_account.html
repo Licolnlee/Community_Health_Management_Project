@@ -1,0 +1,98 @@
+<style>
+    .search {
+  float: left;
+  display: inline;
+  width: 568px;
+  height: 28px;
+  border: 0px solid #ccc;//设置边框
+  background-color: #f2f2f5;
+  margin: 10px 0;
+}
+.search_input {
+  width: 520px;
+  float: left;
+  display: inline;
+  height: 28px;
+  line-height: 28px \9;
+  padding: 0 8px;
+  behavior: url(#default#savehistory);
+}
+</style>
+
+
+{% extends 'manager_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+
+{% endblock %}
+
+{% block body %}
+{#  按身份查找账户：#}
+{#<input type="text" name="account_type"value="{{ account_type }}"class="input-lg" >#}
+{#<input type="submit" value="查找"class="nput-group-addon btn btn-primary btn-lg"formaction="/search_account/"formmethod="post">#}
+{#<br><br>#}
+{#<h2>账户信息汇总表</h2><br>#}
+{#<div class="container">#}
+{#	<div class="row clearfix">#}
+    <div class="container theme-showcase" style="padding-right: 1000px; padding-top: -30px;">
+    <h1 style="line-height: 2em"></h1><br/>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="panel panel-primary" style="width: 1300px;" >
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>账号信息查询</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>注意！</strong>请根据账号身份信息进行查询（医生，居民，管理员）
+                    </div>
+                <div class="col-md-6">
+                    <form role="form" name="form1" style="float: left">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="doctor_name" style="color: black;float: left;">请输入账号身份</label>
+                            <div class="search">
+{#                                <form>#}
+                                <input type="text" name="account_type"value="{{ account_type }}" placeholder="请输入账号身份信息" class="search_input" />
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default" formaction="/search_account/" formmethod="post" style="width: 48px;height: 28px;">查询</button>
+                                </span>
+
+{#                                </form>#}
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+		<div class="col-md-12 column gundong1" style="width: 1300px;height: 600px">
+			<table class="table table-bordered1 table-hover" style="word-break: keep-all;color:black;">
+                <tr class="info">
+                    <td>账户</td>
+                    <td>密码</td>
+                    <td>身份</td>
+                    <td>操作</td>
+                </tr>
+            {% for result in results %}
+            <tr>
+                <td>{{ result.user_telephone }}</td>
+                <td>{{ result.user_password }}</td>
+                <td>{{ result.user_identity }}</td>
+                <td>
+                {% if result.user_identity == "管理员" %}
+                    <button class="btn btn-danger" onclick="return confirm('请问确认要删除该账号？')" disabled="disabled"><a href="/delete_account?telephone={{ result.user_telephone}}" disabled="disabled"><i class="fa fa-trash"></i> 删除</a></button>
+                {% else %}
+                    <button class="btn btn-danger" onclick="return confirm('请问确认要删除该账号？')"><a href="/delete_account?telephone={{ result.user_telephone}}"><i class="fa fa-trash"></i> 删除</a></button>
+                {% endif %}
+                </td>
+
+            </tr>
+                 {% empty %}
+                <tr><strong>搜索无结果</strong></tr>
+            {% endfor %}
+        </table>
+           </div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'resident_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+
+{% endblock %}
+
+{% block body %}
+     <div class="container-fluid clear-float" style="padding-right: 1000px; padding-top: 40px;">
+<h1 style="line-height: 2em"></h1><br/>
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
+    <div class="panel panel-primary" style="width: 1300px;height: 400px;">
+        <div class="panel-heading">
+            <h3 class="panel-title"><strong>家庭成员信息</strong></h3>
+        </div>
+        <div class="panel-body">
+{#       <h2>我的家庭成员</h2><br>#}
+{#<div class="container">#}
+{#	<div class="row clearfix">#}
+		<div class="col-md-10 col-md-offset-1 column gundong1" style="width: 1100px;display: inline;color: black;padding-top: 10px">
+			<table class="table table-bordered1 table-hover" style="word-break: keep-all">
+                <tr class="info">
+                    <td>姓名</td>
+                    <td>性别</td>
+                    <td>年龄</td>
+                    <td>关系</td>
+                    <td>操作</td>
+                </tr>
+            {% for result in results %}
+            <tr>
+                    <td>{{ result.family_name }}</td>
+                    <td>{{ result.family_sex }}</td>
+                    <td>{{ result.family_age }}</td>
+                    <td>{{ result.family_relationship }}</td>
+                <td>
+                    <button class="btn btn-info"><a href="/family_calculate?report_id={{ result.id}}"><i class="glyphicon glyphicon-info-sign"></i> 测试BMI值</a></button>
+                <button class="btn btn-info" style="background-color: forestgreen"> <a href="/alter_family?f_id={{ result.id}}"><i class="glyphicon glyphicon-pencil"></i> 修改信息</a></button>
+                <button class="btn btn-danger" style="" onclick="return confirm('请问是否确认删除您的家庭成员？')"><a href="/delete_family?family_id={{ result.id}}"><i class="fa fa-trash"></i>删除</a></button>
+                </td>
+            </tr>
+                 {% empty %}
+                <tr><strong>您还未添加任何家庭成员</strong></tr>
+            {% endfor %}
+        </table>
+           </div>
+	</div>
+</div>
+</div>
+     </div>
+{% endblock %}

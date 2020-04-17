@@ -1,0 +1,61 @@
+{% extends 'resident_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid clear-float" style="padding-right: 1000px; padding-top: 40px; ">
+<h1 style="line-height: 2em"></h1><br/>
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
+    <div class="panel panel-primary" style="width: 1300px;height: 400px;">
+        <div class="panel-heading">
+            <h3 class="panel-title"><strong>个人信息</strong></h3>
+        </div>
+        <div class="panel-body">
+{#<h4 style=" font-size: 25px;position: relative;left: 22px;">请输入您的个人信息</h4><br>#}
+<div class="form-group">
+<label for="inputEmail3" class="col-md-1 col-md-offset-4 control-label"> 姓名：</label>
+<div class="col-sm-3">
+<input type="text"name="family_name"value="{{ family_name }}" class="form-control"><br>
+</div>
+</div>
+
+<div class="form-group">
+<label for="inputEmail3" class="col-md-1 col-md-offset-4 control-label"> 性别：</label>
+<div class="col-sm-3">
+<select name="family_sex"class="form-control">
+        <option >{{ family_sex }}</option>
+        <option value="男">男</option>
+        <option value="女">女</option>
+    </select><br>
+</div>
+</div>
+
+<div class="form-group">
+<label for="inputEmail3" class="col-md-1 col-md-offset-4 control-label"> 年龄：</label>
+<div class="col-sm-3">
+<input type="text"name="family_age"value="{{ family_age }}" class="form-control"><br>
+</div>
+</div>
+
+<div class="form-group">
+<label for="inputEmail3" class="col-md-1 col-md-offset-4 control-label"> 关系：</label>
+<div class="col-sm-3">
+<input type="text"name="family_relationship"value="{{ family_relationship }}" class="form-control"><br>
+</div>
+</div>
+        <button type="submit"class="btn btn-info"style="
+    position: relative;
+    right: 192px;
+    top: 230px;" onclick="alert('信息修改成功！')"formaction="/alter_family/"formmethod="post">确认</button>
+        <button type="submit"class="btn btn-warning"formaction="/back2/"formmethod="get"style="
+    position: relative;
+    left: -486px;
+    top: 230px;">返回上一级</button>
+        </div>
+    </div>
+</div>
+    </div>
+{% endblock %}

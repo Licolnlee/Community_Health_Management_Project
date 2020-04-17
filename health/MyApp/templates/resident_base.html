@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+ <title>{% block title %}{% endblock %}</title>
+</head>
+{% block link %}
+{% endblock %}
+<link rel="stylesheet"href="../static/css/c.css">
+<link rel="stylesheet"href="../static/css/bootstrap.min.css">
+<link rel="stylesheet"href="../static/css/font-awesome.min.css">
+<link rel="stylesheet" href="../static/css/index.css" />
+<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/js/index.js" ></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+<script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+<style>
+     {% block style %}{% endblock %}
+     table{
+         margin:0 auto;
+     }
+.bg_container{
+    {# background-image: url("../static/img/health-test15.jpg");#}
+    {#background-color: lightblue;#}
+    width: 1254px;
+    height: 780px;
+    position: fixed;
+    top: 54px;
+    left: 221px;
+    color: black;
+}
+.bg_info{
+    {#background-color: lightskyblue;#}
+    text-align: center;
+    position: relative;
+    top:10px;
+}
+.table-hover > tbody > tr:hover {
+    background-color:lightblue;
+}
+.a{
+        background-color:Transparent;
+        border-color:Transparent;
+        border-style:None
+}
+.b{
+        background-color:Transparent;
+        border-color:Transparent;
+        border-style:None;
+        font-size: 30px;
+}
+.navbar-default1{
+    background-color: #2578ff;
+    border-color: #4cae4c;
+}
+    .c{
+        margin-top: 5px;
+        margin-right: 10px;
+    }
+    .d{
+        margin-top: 5px;
+        margin-right: 20px;
+    }
+    .e{
+        float: left;
+        margin-left: 80px;
+        font-size: 30px;
+    }
+    body{
+        background-color: skyblue;
+        background: url("../static/img/health-test15.jpg") no-repeat fixed;
+        background-size: 100%;
+    }
+</style>
+<body>
+<form>
+  {% csrf_token %}
+<div class="container">
+	<div class="row clearfix">
+		<div class=" column"style="width:1322px;position: absolute;left: 260px;">
+			<nav class="navbar navbar-default1 navbar-inverse" role="navigation">
+                <div>
+                    <p class="e">居民个人健康管理系统</p>
+                </div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							 <div class="btn-group"style="position: relative;right: 9px;">
+				            <button class="btn btn-success dropdown-toggle c"data-toggle="dropdown">个人中心
+                                <span class="caret "></span>
+                            </button>
+							<ul class="dropdown-menu">
+								<li>
+									 <a href="/personal_info?">个人信息</a>
+								</li>
+                                <li>
+                                    <a href="/alter_password?">修改密码</a>
+								</li>
+								<li>
+                                    <a href="/back1?">切换账号</a>
+								</li>
+								<li class="divider">
+								</li>
+							</ul>
+                             </div>
+                        </li>
+                        <li>
+                            <input type="submit"style="position: relative;right: 5px;"value="退出"class=" btn btn-success d"formaction="/back1/"formmethod="get">
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+</div>
+<div class="s-side">
+	<ul>
+		<li class="s-firstItem first">
+			<a href="#">
+				<i class="fa fa-home"></i>
+				<input type="submit"value="首页"class="b"formaction="/home_page/"formmethod="get">
+			</a>
+		</li>
+		<li class="first">
+			<div class="d-firstNav s-firstNav clearfix">
+				<i class="fa fa-bars"></i>
+				<span>个人健康档案</span>
+				<i class="fa fa-caret-right fr "></i>
+			</div>
+			<ul class="d-firstDrop s-firstDrop">
+				<li>
+					<div class="d-secondNav s-secondNav">
+						<i class="fa fa-minus-square-o"></i>
+						<input type="submit"value="个人信息录入"class="a"formmethod="get"formaction="/personal_info/">
+						<i class="fa fa-caret-right fr"></i>
+					</div>
+				</li>
+				<li>
+					<div class="d-secondNav s-secondNav">
+						<i class="fa fa-minus-square-o"></i>
+                        <input type="submit"value="BMI指数计算"class="a"formmethod="get"formaction="/calculate_BMI/">
+						<i class="fa fa-caret-right fr "></i>
+					</div>
+                </li>
+                <li>
+					<div class="d-secondNav s-secondNav">
+						<i class="fa fa-minus-square-o"></i>
+                        <input type="submit"value="健康指数报告"class="a"formmethod="get"formaction="/health_reports/">
+						<i class="fa fa-caret-right fr "></i>
+					</div>
+                </li>
+			</ul>
+        <li class="first">
+			<div class="d-firstNav s-firstNav clearfix">
+				<i class="fa fa-bars"></i>
+				<span>家庭成员管理</span>
+				<i class="fa fa-caret-right fr "></i>
+			</div>
+			<ul class="d-firstDrop s-firstDrop">
+				<li>
+					<div class="d-secondNav s-secondNav">
+						<i class="fa fa-minus-square-o"></i>
+						<input type="submit"value="增添家庭成员"class="a"formmethod="get"formaction="/add_family/">
+						<i class="fa fa-caret-right fr"></i>
+					</div>
+				</li>
+                <li>
+					<div class="d-secondNav s-secondNav">
+						<i class="fa fa-minus-square-o"></i>
+						<input type="submit"value="查看家庭成员信息"class="a"formmethod="get"formaction="/search_family/">
+						<i class="fa fa-caret-right fr"></i>
+					</div>
+				</li>
+            </ul>
+		</li>
+        <li class="first">
+			<div class="d-firstNav s-firstNav clearfix">
+				<i class="fa fa-bars"></i>
+				<span>家庭医生管理</span>
+				<i class="fa fa-caret-right fr "></i>
+			</div>
+			<ul class="d-firstDrop s-firstDrop">
+				<li>
+					<div class="d-secondNav s-secondNav">
+						<i class="fa fa-minus-square-o"></i>
+                        <input type="submit"value="查找家庭医生"class="a"formmethod="post"formaction="/search_doctor/">
+						<i class="fa fa-caret-right fr"></i>
+					</div>
+				</li>
+				<li>
+					<div class="d-secondNav s-secondNav">
+						<i class="fa fa-minus-square-o"></i>
+                        <input type="submit"value="查看已签约医生"class="a"formmethod="get"formaction="/appoint_doctor/">
+						<i class="fa fa-caret-right fr "></i>
+					</div>
+			</ul>
+		</li>
+        <li class="first">
+			<div class="d-firstNav s-firstNav clearfix">
+				<i class="fa fa-bars"></i>
+				<span>消息中心</span>
+				<i class="fa fa-caret-right fr "></i>
+			</div>
+			<ul class="d-firstDrop s-firstDrop">
+				<li>
+					<div class="d-secondNav s-secondNav">
+						<i class="fa fa-minus-square-o"></i>
+                        <input type="submit"value="签约消息"class="a"formmethod="get"formaction="/new_message/">
+						<i class="fa fa-caret-right fr"></i>
+					</div>
+				</li>
+                <li>
+					<div class="d-secondNav s-secondNav">
+						<i class="fa fa-minus-square-o"></i>
+                        <input type="submit"value="在线咨询消息"class="a"formmethod="post"formaction="/new_message/">
+						<i class="fa fa-caret-right fr"></i>
+					</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<!--圆圈-->
+{#{% if circle1 == 0 %}#}
+{#<div style=" width: 10px;#}
+{#    height: 10px;#}
+{#    background-color: #2578ff !important;#}
+{#    border-radius: 25px;#}
+{#    position: relative;#}
+{#    left: 91px;#}
+{#    top: 206px;">#}
+{#{% endif %}#}
+{#    <div style=" width: 10px;#}
+{#    height: 10px;#}
+{#    background-color: #F00 !important;#}
+{#    border-radius: 25px;#}
+{#    position: relative;#}
+{#    left: 0px;#}
+{#    top: 0px;">#}
+<div class="bg_container">
+<div class="bg_info">
+     {% block body %}
+
+     {% endblock %}
+</div>
+</div>
+
+</form>
+</body>
+</html>

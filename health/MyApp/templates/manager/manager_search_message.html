@@ -1,0 +1,90 @@
+<style>
+    .search {
+  float: left;
+  display: inline;
+  width: 568px;
+  height: 28px;
+  border: 0px solid #ccc;//设置边框
+  background-color: #f2f2f5;
+  margin: 10px 0;
+}
+.search_input {
+  width: 520px;
+  float: left;
+  display: inline;
+  height: 28px;
+  line-height: 28px \9;
+  padding: 0 8px;
+  behavior: url(#default#savehistory);
+}
+</style>
+{% extends 'manager_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+{% endblock %}
+{% block body %}
+{#请输入发送者者账户：#}
+{#<input type="text" name="send_tel"value="{{ send_tel }}"class="input-lg" >#}
+{#<input type="submit" value="查找"class="nput-group-addon btn btn-primary btn-lg"formaction="/manager_search_message/"formmethod="post">#}
+{#<h2>咨询信息汇总表</h2><br>#}
+{#<div class="container">#}
+{#	<div class="row clearfix">#}
+{#		<div class="col-md-12 column gundong1" style="width: 1300px;height: 600px">#}
+{#			<table class="table table-bordered1 table-hover" style="word-break: keep-all">#}
+      <div class="container theme-showcase" style="padding-right: 1000px; padding-top: -30px;">
+    <h1 style="line-height: 2em"></h1><br/>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="panel panel-primary" style="width: 1300px;" >
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>咨询信息查询</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>注意！</strong>请根据咨询信息进行查询
+                    </div>
+                <div class="col-md-6">
+                 <form role="form" name="form1" style="float: left">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="doctor_name" style="color: black;float: left;">请输入发送方账号信息</label>
+                            <div class="search">
+{#                                <form>#}
+                                <input type="text" name="send_tel"value="{{ send_tel }}" placeholder="请输入发送方账号信息" class="search_input" />
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default" formaction="/manager_search_message/" formmethod="post" style="width: 48px;height: 28px;">查询</button>
+                                </span>
+
+{#                                </form>#}
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+		<div class="col-md-12 column gundong1" style="width: 1200px;height: 600px">
+			<table class="table table-bordered1 table-hover" style="color:black;word-break: keep-all">
+                <tr class="info">
+                    <td>发送者</td>
+                    <td>接收者</td>
+                    <td>发送时间</td>
+                    <td>发送内容</td>
+                    <td>操作</td>
+                </tr>
+            {% for result in results %}
+            <tr>
+                   <td>{{ result.message_send }}</td>
+                   <td>{{ result.message_receive }}</td>
+                   <td>{{ result.send_time }}</td>
+                   <td>{{ result.information }}</td>
+                <td><button class="btn btn-danger" onclick="return confirm('请问确认要删除该消息吗？')"><a href="/manager_delete_message?id={{ result.id}}"><i class="fa fa-trash"></i>删除</a></button></td>
+            </tr>
+                 {% empty %}
+                <tr><strong>搜索无结果</strong></tr>
+            {% endfor %}
+        </table>
+        </div>
+	</div>
+</div>
+{% endblock %}

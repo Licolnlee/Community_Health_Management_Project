@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7f463184-02e8-4bae-82b5-b41c830385be" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/health$manage.coverage" NAME="manage Coverage Results" MODIFIED="1558176819943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="health@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="health@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="health@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="health: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="health" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyApp/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="227" column="77" lean-forward="true" selection-start-line="227" selection-start-column="77" selection-end-line="227" selection-end-column="77" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#177#212#0" />
+                <element signature="e#240#278#0" />
+                <element signature="e#311#1297#0" />
+                <element signature="e#1329#2799#0" />
+                <element signature="e#2346#3488#0" />
+                <element signature="e#3523#4070#0" />
+                <element signature="e#4107#4790#0" />
+                <element signature="e#4828#6528#0" />
+                <element signature="e#6561#7816#0" />
+                <element signature="e#7849#8277#0" />
+                <element signature="e#8311#9071#0" />
+                <element signature="e#9101#9727#0" />
+                <element signature="e#9760#10018#0" />
+                <element signature="e#10051#10339#0" />
+                <element signature="e#10371#11536#0" />
+                <element signature="e#11572#12794#0" />
+                <element signature="e#12827#14075#0" />
+                <element signature="e#14103#14974#0" />
+                <element signature="e#15008#16355#0" />
+                <element signature="e#16386#17274#0" />
+                <element signature="e#17305#17830#0" />
+                <element signature="e#17874#19035#0" />
+                <element signature="e#19078#19685#0" />
+                <element signature="e#19719#20077#0" />
+                <element signature="e#20111#20962#0" />
+                <element signature="e#20991#21157#0" />
+                <element signature="e#21191#22183#0" />
+                <element signature="e#22229#23017#0" />
+                <element signature="e#23053#23334#0" />
+                <element signature="e#23370#24429#0" />
+                <element signature="e#24960#25225#0" />
+                <element signature="e#24770#25379#0" />
+                <element signature="e#27163#29859#0" />
+                <element signature="e#28802#29355#0" />
+                <element signature="e#29397#31152#0" />
+                <element signature="e#31186#33030#0" />
+                <element signature="e#33072#34226#0" />
+                <element signature="e#34267#34880#0" />
+                <element signature="e#34919#35524#0" />
+                <element signature="e#35556#35974#0" />
+                <element signature="e#36006#36330#0" />
+                <element signature="e#36364#36513#0" />
+                <element signature="e#36555#36645#0" />
+                <element signature="e#36687#37474#0" />
+                <element signature="e#37509#38137#0" />
+                <element signature="e#38171#38778#0" />
+                <element signature="e#38809#39410#0" />
+                <element signature="e#39444#40055#0" />
+                <element signature="e#40088#40371#0" />
+                <element signature="e#40406#40694#0" />
+                <element signature="e#40725#41017#0" />
+                <element signature="e#41051#41363#0" />
+                <element signature="e#41388#41704#0" />
+                <element signature="e#41729#42270#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MyApp/templates/resident/search_doctor.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="253" column="24" lean-forward="true" selection-start-line="253" selection-start-column="24" selection-end-line="253" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>create</find>
+      <find>update</find>
+      <find>datetim</find>
+      <find>datetime</find>
+      <find>doctor_consult_message</find>
+      <find>request_time</find>
+      <find>health_reports</find>
+      <find>family_ca</find>
+      <find>search_s</find>
+      <find>consult_doctor</find>
+      <find>search_d</find>
+      <find>search_doctor</find>
+      <find>doctor_appoint_message</find>
+      <find>doctor_deal_time</find>
+      <find>未读</find>
+      <find>resident_receive_message</find>
+      <find>receive_message.h</find>
+      <find>doctor_receive_message</find>
+      <find>receive_message</find>
+      <find>appoint_do</find>
+      <find>appoint_doctor</find>
+      <find>appoint_resident</find>
+      <find>#db4c00</find>
+      <find>delete_report</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/MyApp/templates/doctor_base.html" />
+        <option value="$PROJECT_DIR$/MyApp/static/css/mystyle.css" />
+        <option value="$PROJECT_DIR$/MyApp/static/css/index.css" />
+        <option value="$PROJECT_DIR$/MyApp/templates/manager/manager_homepage.html" />
+        <option value="$PROJECT_DIR$/MyApp/static/css/manager_body.css" />
+        <option value="$PROJECT_DIR$/MyApp/static/css/doctor_body.css" />
+        <option value="$PROJECT_DIR$/MyApp/templates/manager/search_doctors.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/h.html" />
+        <option value="$PROJECT_DIR$/MyApp/static/css/sp.css" />
+        <option value="$PROJECT_DIR$/MyApp/templates/manager_base.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/test/hh.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/doctor/search_service_team.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident/doctor_info.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/test/two.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/doctor/appoint_service_team.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident/personal_info.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident/calculate_BMI.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident/family_calculate.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident/health_report.html" />
+        <option value="$PROJECT_DIR$/MyApp/static/css/resident_body.css" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident/add_family.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident/family_info.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/doctor/doctor_consult_message.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident/consult_message.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/test/circle.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident_base.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident/resident_homepage.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/doctor/appoint_resident.html" />
+        <option value="$PROJECT_DIR$/MyApp/static/css/text.css" />
+        <option value="$PROJECT_DIR$/MyApp/templates/doctor/doctor_appoint_message.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/doctor/appoint_info.html" />
+        <option value="E:/Download/Google/css3-creative-switch-button/index.html" />
+        <option value="E:/Download/Google/css3-creative-switch-button/css/style.css" />
+        <option value="$PROJECT_DIR$/MyApp/static/css/button.css" />
+        <option value="$PROJECT_DIR$/MyApp/templates/doctor/doctor_personal_info.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/doctor/receive_message.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/doctor/contact_resident.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident/resident_receive_message.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident/consult_doctor.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident/appoint_doctor.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident/search_family.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident/family_reports.html" />
+        <option value="$PROJECT_DIR$/MyApp/static/css/style.css" />
+        <option value="$PROJECT_DIR$/MyApp/templates/register.html" />
+        <option value="$PROJECT_DIR$/MyApp/templates/doctor/doctor_homepage.html" />
+        <option value="$PROJECT_DIR$/MyApp/views.py" />
+        <option value="$PROJECT_DIR$/health/urls.py" />
+        <option value="$PROJECT_DIR$/MyApp/models.py" />
+        <option value="$PROJECT_DIR$/MyApp/__init__.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/MyApp/templates/resident/search_doctor.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="471" />
+    <option name="y" value="28" />
+    <option name="width" value="1034" />
+    <option name="height" value="598" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="health" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="health" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health" type="462c0819:PsiDirectoryNode" />
+              <item name="health" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="health" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health" type="462c0819:PsiDirectoryNode" />
+              <item name="MyApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="health" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health" type="462c0819:PsiDirectoryNode" />
+              <item name="MyApp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="health" type="b2602c69:ProjectViewProjectNode" />
+              <item name="health" type="462c0819:PsiDirectoryNode" />
+              <item name="MyApp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="resident" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ProgramApp\Django可执行项目\health\MyApp\static\css" />
+      <recent name="E:\ProgramApp\Django可执行项目\health\MyApp\static\img" />
+      <recent name="E:\ProgramApp\Django可执行项目\health\MyApp\templates\test" />
+      <recent name="E:\ProgramApp\Django可执行项目\health\MyApp\templates\doctor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ProgramApp\Django可执行项目\health\MyApp\static\css" />
+      <recent name="E:\ProgramApp\Django可执行项目\health\MyApp\static\img" />
+      <recent name="E:\ProgramApp\Django可执行项目\health\MyApp\static\js" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.manage">
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="health" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="health" type="Python.DjangoServer" factoryName="Django server">
+      <module name="health" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.health" />
+      <item itemvalue="Python.manage" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.manage" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f463184-02e8-4bae-82b5-b41c830385be" name="Default Changelist" comment="" />
+      <created>1557465406829</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557465406829</updated>
+      <workItem from="1557465408927" duration="156393000" />
+      <workItem from="1558067715042" duration="24608000" />
+      <workItem from="1558139184237" duration="25368000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="206369000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1488" height="843" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" order="0" sideWeight="0.5008881" side_tool="true" weight="0.21578212" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4991119" visible="true" weight="0.2150838" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.18373072" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Database Console" order="4" weight="0.32959327" />
+      <window_info anchor="bottom" id="Python Console" order="5" />
+      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32959327" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.19775596" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="right" id="Database" order="0" visible="true" weight="0.20949721" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="SciView" order="2" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/resident/health_report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="56" lean-forward="true" selection-end-line="34" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2e79232b-1651-40c0-a90d-06b10abe8c57/schema/health/table/myapp_health_report">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/resident/family_calculate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="30" column="82" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="82" />
+          <folding>
+            <element signature="e#1478#1537#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/doctor/search_service_team.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/manager_base.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/test/circle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/resident/consult_message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding>
+            <element signature="e#796#813#0#HTML" expanded="true" />
+            <element signature="e#958#975#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/resident_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="186" column="111" selection-start-line="186" selection-start-column="97" selection-end-line="186" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/static/css/sp.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/static/css/resident_body.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/static/css/manager_body.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/static/css/text.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/doctor/appoint_resident.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="24" column="46" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/doctor/appoint_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="95" column="29" lean-forward="true" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/static/css/normalize.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="139" selection-start-column="139" selection-end-column="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Download/Google/css3-creative-switch-button/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="314" column="30" lean-forward="true" selection-start-line="314" selection-start-column="30" selection-end-line="314" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/static/css/button.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="306" column="19" lean-forward="true" selection-start-line="306" selection-start-column="19" selection-end-line="306" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Download/Google/css3-creative-switch-button/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/resident/personal_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-366">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/doctor_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="124" column="114" selection-start-line="124" selection-start-column="94" selection-end-line="124" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/doctor/doctor_personal_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="52" column="6" lean-forward="true" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/resident/resident_homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/doctor/doctor_appoint_message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/doctor/doctor_consult_message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/resident/resident_receive_message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#311#371#0#HTML" expanded="true" />
+            <element signature="e#669#792#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/doctor/receive_message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+          <folding>
+            <element signature="e#148#302#0#HTML" expanded="true" />
+            <element signature="e#309#369#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/doctor/contact_resident.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <element signature="e#740#863#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/resident/consult_doctor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/resident/appoint_doctor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding>
+            <element signature="e#822#847#0#HTML" expanded="true" />
+            <element signature="e#846#852#0#HTML" expanded="true" />
+            <element signature="e#852#858#0#HTML" expanded="true" />
+            <element signature="e#858#864#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/resident/add_family.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/resident/family_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/resident/search_family.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding>
+            <element signature="e#869#894#0#HTML" expanded="true" />
+            <element signature="e#926#932#0#HTML" expanded="true" />
+            <element signature="e#932#938#0#HTML" expanded="true" />
+            <element signature="e#938#944#0#HTML" expanded="true" />
+            <element signature="e#1020#1038#0#HTML" expanded="true" />
+            <element signature="e#1036#1042#0#HTML" expanded="true" />
+            <element signature="e#1042#1048#0#HTML" expanded="true" />
+            <element signature="e#1048#1054#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/resident/family_reports.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="43" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="43" />
+          <folding>
+            <element signature="e#1127#1164#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="47" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-418">
+          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+          <folding>
+            <element signature="e#36#358#0" />
+            <element signature="e#365#692#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/doctor/doctor_homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2e79232b-1651-40c0-a90d-06b10abe8c57/schema/health/table/myapp_message">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2e79232b-1651-40c0-a90d-06b10abe8c57/schema/health/table/myapp_appoint">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="51" column="53" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2e79232b-1651-40c0-a90d-06b10abe8c57/schema/health/table/myapp_service_team">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2e79232b-1651-40c0-a90d-06b10abe8c57/schema/health/table/myapp_family">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2e79232b-1651-40c0-a90d-06b10abe8c57/schema/health/table/myapp_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2e79232b-1651-40c0-a90d-06b10abe8c57/schema/health/table/myapp_resident">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2e79232b-1651-40c0-a90d-06b10abe8c57/schema/health/table/myapp_doctor">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="227" column="77" lean-forward="true" selection-start-line="227" selection-start-column="77" selection-end-line="227" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#177#212#0" />
+            <element signature="e#240#278#0" />
+            <element signature="e#311#1297#0" />
+            <element signature="e#1329#2799#0" />
+            <element signature="e#2346#3488#0" />
+            <element signature="e#3523#4070#0" />
+            <element signature="e#4107#4790#0" />
+            <element signature="e#4828#6528#0" />
+            <element signature="e#6561#7816#0" />
+            <element signature="e#7849#8277#0" />
+            <element signature="e#8311#9071#0" />
+            <element signature="e#9101#9727#0" />
+            <element signature="e#9760#10018#0" />
+            <element signature="e#10051#10339#0" />
+            <element signature="e#10371#11536#0" />
+            <element signature="e#11572#12794#0" />
+            <element signature="e#12827#14075#0" />
+            <element signature="e#14103#14974#0" />
+            <element signature="e#15008#16355#0" />
+            <element signature="e#16386#17274#0" />
+            <element signature="e#17305#17830#0" />
+            <element signature="e#17874#19035#0" />
+            <element signature="e#19078#19685#0" />
+            <element signature="e#19719#20077#0" />
+            <element signature="e#20111#20962#0" />
+            <element signature="e#20991#21157#0" />
+            <element signature="e#21191#22183#0" />
+            <element signature="e#22229#23017#0" />
+            <element signature="e#23053#23334#0" />
+            <element signature="e#23370#24429#0" />
+            <element signature="e#24960#25225#0" />
+            <element signature="e#24770#25379#0" />
+            <element signature="e#27163#29859#0" />
+            <element signature="e#28802#29355#0" />
+            <element signature="e#29397#31152#0" />
+            <element signature="e#31186#33030#0" />
+            <element signature="e#33072#34226#0" />
+            <element signature="e#34267#34880#0" />
+            <element signature="e#34919#35524#0" />
+            <element signature="e#35556#35974#0" />
+            <element signature="e#36006#36330#0" />
+            <element signature="e#36364#36513#0" />
+            <element signature="e#36555#36645#0" />
+            <element signature="e#36687#37474#0" />
+            <element signature="e#37509#38137#0" />
+            <element signature="e#38171#38778#0" />
+            <element signature="e#38809#39410#0" />
+            <element signature="e#39444#40055#0" />
+            <element signature="e#40088#40371#0" />
+            <element signature="e#40406#40694#0" />
+            <element signature="e#40725#41017#0" />
+            <element signature="e#41051#41363#0" />
+            <element signature="e#41388#41704#0" />
+            <element signature="e#41729#42270#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyApp/templates/resident/search_doctor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="253" column="24" lean-forward="true" selection-start-line="253" selection-start-column="24" selection-end-line="253" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

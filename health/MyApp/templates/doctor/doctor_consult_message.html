@@ -1,0 +1,50 @@
+{% extends 'doctor_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+
+{% endblock %}
+
+{% block body %}
+{#   <h2>在线咨询消息</h2><br>#}
+{#<div class="container">#}
+{#	<div class="row clearfix">#}
+{#		<div class="col-md-12 column gundong1" style="width: 1300px;height: 600px">#}
+{#			<table class="table table-bordered1 table-hover" style="word-break: keep-all">#}
+    <div class="container theme-showcase" style="padding-right: 1000px; padding-top: -30px;">
+    <h1 style="line-height: 2em"></h1><br/>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="panel panel-primary" style="width: 1300px;" >
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>咨询消息汇总</strong></h3>
+                </div>
+                <div class="panel-body">
+		<div class="col-md-12 column gundong1" style="width: 1250px;height: 600px">
+			<table class="table table-bordered1 table-hover" style="word-break: keep-all;color:black;">
+                <tr class="info">
+                    <td>发送者</td>
+                    <td>发送时间</td>
+                    <td>操作</td>
+                </tr>
+            {% for result in results %}
+            <tr>
+                    <td>{{ result.message_send }}</td>
+                    <td>{{ result.send_time }}</td>
+                <td>
+                    {% if result.doctor_IsRead == "已读" %}
+                        <button class="btn btn-default" style="background-color:darkgray;"><a href="/doctor_receive_message?message_id={{ result.id}}"><i class="glyphicon glyphicon-ok-sign"></i> {{ result.doctor_IsRead }}</a></button>
+                    {% else %}
+                        <button class="btn btn-default" style="background-color:darkorange;"><a href="/doctor_receive_message?message_id={{ result.id}}"><i class="glyphicon glyphicon-info-sign"></i> {{ result.doctor_IsRead }}</a></button>
+                    {% endif %}
+                    <button class="btn btn-danger" onclick="return confirm('请问是否需要删除该条消息？')"> <a href="/doctor_delete_message?message_id={{ result.id}}"><i class="fa fa-trash"></i> 删除</a></button>
+                </td>
+            </tr>
+                {% empty %}
+                <tr><strong>您暂未收到任何消息</strong></tr>
+            {% endfor %}
+        </table>
+           </div>
+	</div>
+</div>
+{% endblock %}

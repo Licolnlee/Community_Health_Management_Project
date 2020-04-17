@@ -1,0 +1,45 @@
+{% extends 'doctor_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+
+{% endblock %}
+
+{% block body %}
+{#<h2>您的服务团队</h2><br>#}
+{#<div class="container">#}
+{#	<div class="row clearfix">#}
+{#		<div class="col-md-12 column gundong1" style="width: 1300px;height: 600px">#}
+{#			<table class="table table-bordered1 table-hover" style="word-break: keep-all">#}
+    <div class="container theme-showcase" style="padding-right: 1000px; padding-top: -30px;">
+    <h1 style="line-height: 2em"></h1><br/>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="panel panel-primary" style="width: 1300px;" >
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>您的服务团队</strong></h3>
+                </div>
+                <div class="panel-body">
+		<div class="col-md-12 column gundong1" style="width: 1250px;height: 600px">
+			<table class="table table-bordered1 table-hover" style="word-break: keep-all;color:black;">
+                <tr class="info">
+                    <td>服务团队名称</td>
+                    <td>团队介绍</td>
+                    <td>联系电话</td>
+                    <td>操作</td>
+                </tr>
+            {% for result in results %}
+            <tr>
+                    <td>{{ result.team_name }}</td>
+                    <td>{{ result.team_introduction }}</td>
+                    <td>{{ result.team_telephone }}</td>
+                    <td><button class="btn btn-danger" onclick="return confirm('请问是否确认要与该服务团队取消签约？')"> <a href="/delete_teams?team_id={{ result.id}}"><i class="fa fa-trash"></i> 取消签约</a></button></td>
+            </tr>
+                                {% empty %}
+                <tr><strong>您还未签约服务团队</strong></tr>
+            {% endfor %}
+        </table>
+           </div>
+	</div>
+</div>
+{% endblock %}

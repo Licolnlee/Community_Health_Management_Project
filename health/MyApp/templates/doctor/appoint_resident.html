@@ -1,0 +1,58 @@
+{% extends 'doctor_base.html' %}
+{% block title %}add_family{% endblock %}
+{% block link %}
+
+{% endblock %}
+
+{% block body %}
+        <script>
+    var a={{ status }}
+    if(a==1){
+        alert("该居民还未填写健康档案。");
+    }
+    </script>
+{# <h2>已签约客户信息</h2><br>#}
+{#<div class="container">#}
+{#	<div class="row clearfix">#}
+{#		<div class="col-md-12 column gundong1" style="width: 1300px;height: 600px">#}
+{#			<table class="table table-bordered1 table-hover" style="word-break: keep-all">#}
+    <div class="container theme-showcase" style="padding-right: 1000px; padding-top: -30px;">
+    <h1 style="line-height: 2em"></h1><br/>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="panel panel-primary" style="width: 1300px;" >
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>签约居民信息汇总</strong></h3>
+                </div>
+                <div class="panel-body">
+		<div class="col-md-12 column gundong1" style="width: 1300px;height: 600px">
+			<table class="table table-bordered1 table-hover" style="word-break: keep-all;color:black;">
+                <tr class="info">
+                    <td>签约客户账号</td>
+                    <td>签约时间</td>
+                    <td>预约就诊时间</td>
+                    <td>操作</td>
+                </tr>
+            {% for result in results %}
+            <tr>
+                    <td>{{ result.resident_telephone }}</td>
+                    <td>{{ result.doctor_deal_time }}</td>
+                    <td>{{ result.resident_appoint_time }}</td>
+                <td>
+                    <button class="btn btn-info"> <a href="/contact_resident?resident_id={{ result.id}}"><i class="glyphicon glyphicon-comment"></i> 联系居民</a></button>
+                    <button class="btn btn-default" style="background-color:forestgreen;"><a href="/resident_info?resident_id={{ result.id }}"><i class="glyphicon glyphicon-info-sign"></i> 查看居民信息</a></button>
+                    <button class="btn btn-default" style="background-color:darkorange;"><a href="/resident_health_report?resident_id={{ result.id }}"><i class="glyphicon glyphicon-info-sign"></i> 查看居民健康档案</a> </button>
+                    <button class="btn btn-warning"><a href="/resident_family?resident_id={{ result.id }}"><i class="glyphicon glyphicon-info-sign"></i> 查看家庭成员健康信息</a> </button>
+                </td>
+
+            </tr>
+                 {% empty %}
+                <tr><strong>还没有居民与您完成签约，请耐心等待</strong></tr>
+            {% endfor %}
+        </table>
+           </div>
+	</div>
+</div>
+
+{% endblock %}

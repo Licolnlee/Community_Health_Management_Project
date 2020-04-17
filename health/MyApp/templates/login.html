@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+    <link
+     href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"
+     rel="stylesheet" />
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style>
+        h3{
+     font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+     font-size: 60px;
+     color:white;
+     text-align: center;
+     margin-top: 40px;
+ }
+.btn1 {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  border: 2px solid transparent;
+  background: #3498DB;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: black;
+  transition: 0.25s;
+  display: block;
+ width: 95px;
+    margin-left: -8px;
+    margin-top: 36px;
+}
+.btn1:hover{
+    background-color: steelblue;
+}
+.btn2 {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  border: 2px solid transparent;
+  background: #3498DB;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+     width: 85px;
+    margin-left: 97px;
+    margin-top: -47px;
+}
+.btn2:hover{
+    background-color: steelblue;
+}
+.btn3 {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border: 2px solid transparent;
+    background: #3498DB;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 80px;
+    margin-left: 193px;
+    margin-top: -49px;
+}
+.btn3:hover{
+    background-color: steelblue;
+}
+.login-link{
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    width: 250px;
+}
+.login-link:hover{
+    background-color: darkgray;
+}
+.login-field{
+    font-size: 15px;
+    width: 210px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.input-group-addon{
+    width: 40px;
+    display: inline-block;
+}
+.glyphicon{
+    vertical-align: center;
+}
+.glyphicon-user{
+    vertical-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    float: none;
+    background-position: center;
+    text-align: center;
+}
+.glyphicon-lock{
+    vertical-align: center;
+}
+.login-field:hover{
+    background-color: darkgray;
+}
+        input:hover{
+            border:1px solid steelblue;
+        }
+        .login-screen{
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .avator{
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+p{
+    text-align: center;
+    font-size: 30px;
+}
+        body{
+            background-color: #5bc0de;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        video{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -9999;
+        }
+.clearfix{
+    overflow: auto;
+}
+
+    </style>
+</head>
+<script>
+    function on_return(event) {
+        if (event.keyCode==13) {
+            if (document.all('sub')!=null) {
+                document.all('sub').click();
+            }
+        }
+    }
+</script>
+  <body onkeydown="on_return(event);">
+  <video src="../static/video/backgroud.mp4" type="video/mp4" autoplay="autoplay" loop="loop" class="video-bg"></video>
+{#{% if status == 1 %}#}
+{#   <div class="alert alert-danger alert-dismissable"> {{ info }}</div>#}
+{#{% elif status == 2 %}#}
+{#    <div class="alert alert-danger alert-dismissable"> {{ info }}</div>#}
+{#{% elif status == 3 %}#}
+{#    <div class="alert alert-danger alert-dismissable"> {{ info }}</div>#}
+{#{% endif %}#}
+{#  <script type="text/javascript">#}
+{#      var a={{ status }}#}
+{#      if (a==1){#}
+{#          alert({{ info }});#}
+{#      }#}
+{#      if (a==2){#}
+{#          alert({{ info }});#}
+{#      }#}
+{#      if (a==3){#}
+{#          alert({{ info }});#}
+{#      }#}
+{#  </script>#}
+<form >
+    {% csrf_token %}
+    <h3>欢&nbsp;迎&nbsp;登&nbsp;录&nbsp;个&nbsp;人&nbsp;健&nbsp;康&nbsp;管&nbsp;理&nbsp;平&nbsp;台</h3>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>登录</h1>
+                <img src="../static/img/avatar1.ico" class="avator" width="96" height="96"/>
+			</div>
+				<div class="control-group">
+                    <div class="input-group">
+                    <span class="input-group-addon">
+				<i class="glyphicon glyphicon-user"></i></span> <input type="text" class="login-field" value="" placeholder="Telephone/Email" id="login-name"name="user_telephone"autofocus required oninvalid="setCustomValidity('账号名不能为空');"oninput="setCustomValidity('')">
+				<label class="login-field-icon fui-user" for="login-name"></label>
+				</div>
+                </div>
+				<div class="control-group">
+                    <div class="input-group">
+                    <span class="input-group-addon">
+				<i class="glyphicon glyphicon-lock"></i></span><input type="password" class="login-field" value="" placeholder="password" id="login-pass"name="user_password" required oninvalid="setCustomValidity('密码不能为空');"oninput="setCustomValidity('')">
+				<label class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>
+                                {% if status == 1 %}
+   <div class="alert alert-danger alert-dismissable" style="width: 250px;"> {{ info }}<button type="button" class="close" data-dismiss="alert" aria-label="Close" style="top: -10px;left: 10px"><span aria-hidden="true">&times;</span></button></div>
+{% elif status == 2 %}
+    <div class="alert alert-danger alert-dismissable" style="width: 250px;"> {{ info }}<button type="button" class="close" data-dismiss="alert" aria-label="Close" style="top: -10px;left: 10px"><span aria-hidden="true">&times;</span></button></div>
+{% elif status == 3 %}
+    <div class="alert alert-danger alert-dismissable" style="width: 250px;"> {{ info }}<button type="button" class="close" data-dismiss="alert" aria-label="Close" style="top: -26px;left: 10px"><span aria-hidden="true">&times;</span></button></div>
+{% elif status == 4 %}
+    <div class="alert alert-success alert-dismissable" style="width: 250px;"> {{ info }}<button type="button" class="close" data-dismiss="alert" aria-label="Close" style="top: -10px;left: 10px"><span aria-hidden="true">&times;</span></button></div>
+{% endif %}
+{#<div class="btn-group">#}
+{#  <button class="btn btn-secondary btn-lg" type="button">#}
+{#    登录#}
+{#  </button>#}
+{#  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#    <span class="sr-only">Toggle Dropdown</span>#}
+{#  </button>#}
+{#  <div class="dropdown-menu">#}
+{#    <button class="dropdown-item" type="button">管理员登录</button>#}
+{#    <button class="dropdown-item" type="button">医生登录</button>#}
+{#    <button class="dropdown-item" type="button">居民登录</button>#}
+{#  </div>#}
+{#</div>#}
+                    <div class="btn-group" style="padding-top: 20px">
+                        <button id="sub" type="submit" class="btn btn-info" formaction="/resident_login/" formmethod="get" style="width: 230px;height: 40px;font-size: 15px">登录</button>
+                        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 10px;display: inline;">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button type="submit" class="dropdown-item" formaction="/manager_login/" formmethod="get">管理员登录</button>
+                            <button type="submit"class="dropdown-item" formaction="/doctor_login/"formmethod="get">医生登录</button>
+                            <button type="submit"class="dropdown-item" formaction="/resident_login/"formmethod="get">居民登录</button>
+                        </div>
+                    </div>
+                    <input type="submit" class="login-link"value="还没有账号？请注册"formaction="/register/"formmethod="get">
+{#                <input type="submit"class="btn1"value="管理员登录"formaction="/manager_login/"formmethod="get">#}
+{#                <input type="submit"class="btn2"value="医生登录"formaction="/doctor_login/"formmethod="get">#}
+{#                <input type="submit"class="btn3"value="居民登录"formaction="/resident_login/"formmethod="get">#}
+{#				<input type="submit" class="login-link"value="还没有账号？请注册"formaction="/register/"formmethod="get">#}
+			</div>
+		</div>
+	</div>
+    </form>
+<script>
+
+!function(){
+
+function n(n,e,t){
+
+return n.getAttribute(e)||t
+
+}
+
+function e(n){
+
+return document.getElementsByTagName(n)
+
+}
+
+function t(){
+
+var t=e("script"),o=t.length,i=t[o-1];
+
+return{
+
+l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",100)
+
+}
+
+}
+
+function o(){
+
+a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
+
+c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
+
+}
+
+function i(){
+
+r.clearRect(0,0,a,c);
+
+var n,e,t,o,m,l;
+
+s.forEach(function(i,x){
+
+for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],
+
+null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,
+
+l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),
+
+t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))
+
+}),
+
+x(i)
+
+}
+
+var a,c,u,m=document.createElement("canvas"),
+
+d=t(),l="c_n"+d.l,r=m.getContext("2d"),
+
+x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||
+
+function(n){
+
+window.setTimeout(n,1e3/45)
+
+},
+
+w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.onresize=o,
+
+window.onmousemove=function(n){
+
+n=n||window.event,y.x=n.clientX,y.y=n.clientY
+
+},
+
+window.onmouseout=function(){
+
+y.x=null,y.y=null
+
+};
+
+for(var s=[],f=0;d.n>f;f++){
+
+var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})
+
+}
+
+u=s.concat([y]),
+
+setTimeout(function(){i()},100)
+
+}();
+
+</script>
+  </body>
+</html>
